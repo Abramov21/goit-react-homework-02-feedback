@@ -1,21 +1,22 @@
 import PropTypes from 'prop-types';
 // import css from 'react';
 
-const FeedbackOptions  = ({ options, setFeedback}) => {
-    return (
-        <ul>
-            {options.map((item) => <li key={item}>
-                <button  type='button' onClick={() => setFeedback(item)}>{item}
-                </button>
-            </li>)}
-        </ul>
-    )
+const FeedbackOptions = ({ options, setFeedback }) => {
+  return (
+    <ul>
+      {options.map(item => (
+        <li key={item}>
+          <button type="button" onClick={() => setFeedback(item)}>
+            {item}
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
 };
 
+export default FeedbackOptions;
 
-export default FeedbackOptions ;
-
-
-Notification .propTypes = {
+FeedbackOptions.propTypes = {
   title: PropTypes.string.isRequired,
 };
